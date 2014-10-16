@@ -68,7 +68,7 @@ namespace PrismDelegateCommand.ViewModels
         {
             Debug.WriteLine("called CanExecuteClick: {0}; Input value: {1}", DateTime.Now, Input);
 
-            return string.IsNullOrEmpty(Input) ? false : (Input.Length % 2) == 0;
+            return string.IsNullOrEmpty(Input) || (Input.Length % 2) == 0;
         }
     }
 }
